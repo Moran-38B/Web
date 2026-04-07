@@ -1,15 +1,10 @@
-// @ts-check
-
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
-import tailwindcss from '@tailwindcss/vite';
-
-// https://astro.build/config
 export default defineConfig({
+  // 這裡的 site 請換成你的 GitHub 帳號名
   site: 'https://Moran-38B.github.io',
-  base: '/Web.github.io',
-
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  // 這裡的 base 必須跟你的 Repo 名稱完全一致，且前後都有斜線
+  base: '/Web.github.io/', 
+  integrations: [tailwind()],
 });
